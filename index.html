@@ -1,0 +1,48 @@
+    <!DOCTYPE html>
+    <html lang="es">
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TreeFiler </title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="./sources/style.css">
+    <link rel="shortcut icon" href="./sources/favicon-32x32.png" type="image/x-icon">
+    </head>
+    <body>
+    <div class="container">
+        <h1>TreeFiler ( <i class="fas fa-tree"></i> )</h1>
+        <p class="text-center">Cargue un archivo ZIP para ver la estructura de carpetas.</p>
+        <div class="instructions">
+        <p><strong>Instrucciones:</strong> Seleccione un archivo ZIP usando el botón de abajo para ver su estructura. Puede hacer clic en las carpetas para expandirlas o colapsarlas.</p>
+        </div>
+        <p class="warning"><i class="fas fa-exclamation-circle"></i> Nota: Este analizador de estructura no es un escáner de virus. No garantiza la seguridad de los archivos subidos.</p>
+        <div class="input-group mb-3">
+        <div class="custom-file">
+            <input type="file" class="custom-file-input" id="zipFileInput">
+            <label class="custom-file-label" for="zipFileInput">Selecciona archivo .ZIP o .RAR</label>
+        </div>
+        </div>
+        <div class="structure-container">
+        <div class="file-details" id="fileDetails">
+            <p><i class="fas fa-file-archive"></i><strong>Nombre:</strong> <span id="fileName">N/A</span></p>
+            <p><i class="fas fa-weight-hanging"></i><strong>Tamaño:</strong> <span id="fileSize">N/A</span></p>
+            <p><i class="fas fa-calendar-alt"></i><strong>Modificado:</strong> <span id="fileDate">N/A</span></p>
+        </div>
+        <hr>
+        <div class="structure-title">Estructura:</div>
+        <div id="treeContainer"></div>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2024  - <a href="https://luigiadducci.netlify.app">Luigi Adducci</a></p>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.7.1/jszip.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="./tree.js"></script>
+    </body>
+    </html>
